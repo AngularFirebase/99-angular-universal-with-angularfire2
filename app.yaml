@@ -1,0 +1,14 @@
+runtime: nodejs
+env: flex
+skip_files:
+  - src/
+  - node_modules/
+  - e2e
+
+manual_scaling:
+  instances: 1
+resources:
+  cpu: 1
+  memory_gb: 0.5
+  disk_size_gb: 10
+

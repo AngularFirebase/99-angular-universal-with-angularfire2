@@ -1,0 +1,22 @@
+<a routerLink="/animals" class="btn btn-info btn-sm">Back to Animal List</a>
+
+<div *ngIf="animal$ | async as animal" >
+
+    <hr>
+
+    Paste this link into the <a href="https://cards-dev.twitter.com/validator" target="_blank">Twitter Card Validator</a>: 
+
+    <code>https://firestarter-96e46.appspot.com/animals/{{ animal.name | lowercase }}</code>
+
+    <hr>
+
+    <div class="card">
+        <img class="card-img-top" [src]="animal.imgURL">
+        <div class="card-body">
+            <h3 class="card-title">{{ animal.name }}</h3>
+            <p class="card-text">{{ animal.bio }}</p>
+        </div>
+    </div>
+
+</div>
+

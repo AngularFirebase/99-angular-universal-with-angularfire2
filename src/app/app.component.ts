@@ -13,7 +13,9 @@ export class AppComponent implements OnInit {
 
   constructor(private afs: AngularFirestore) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+
+   }
 
 
 }

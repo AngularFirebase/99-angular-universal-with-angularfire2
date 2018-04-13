@@ -1,0 +1,18 @@
+<h1>{{ title }}</h1>
+
+<p>{{ description }}</p>
+
+<div *ngFor="let animal of animals$ | async">
+  <a [routerLink]="animal.name | lowercase">{{ animal.name }}</a>
+</div>
+
+
+<h2>Add your Own</h2>
+
+<label>Animal Name</label>
+<input type="text" class="form-control" [(ngModel)]="newAnimal.name">
+
+<label>Bio</label>
+<textarea type="text" class="form-control" [(ngModel)]="newAnimal.bio"></textarea>  
+
+<button (click)="create()">Create</button>
